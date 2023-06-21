@@ -1,0 +1,48 @@
+{
+  "id": "did:web:did.quaddev.xyz",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:did.quaddev.xyz"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://did.quaddev.xyz/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/1888a53a-ad88-49f1-8236-1d31e1cc3701"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#4cb0c2c9eeca47e5b03aa534531a754cvcSigningKey-bc65a",
+      "controller": "did:web:did.quaddev.xyz",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "RycmiczAOqdPZNwwSUi08nt79NhONQkUbloNY3TwiKM",
+        "y": "Y2RjtCfkox91-oJQ6wYY3hyRjh8NQZqRElgFh9PVNWo"
+      }
+    }
+  ],
+  "authentication": [
+    "#4cb0c2c9eeca47e5b03aa534531a754cvcSigningKey-bc65a"
+  ],
+  "assertionMethod": [
+    "#4cb0c2c9eeca47e5b03aa534531a754cvcSigningKey-bc65a"
+  ]
+}
